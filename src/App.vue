@@ -5,7 +5,7 @@
   <p>{{ count }}</p>
   <CourseItem @count-to-parent="addOne" />
   <courses
-    :id="profile"
+    :id="id"
     :course="course"
     :credits="credits"
     :location="location"
@@ -21,11 +21,12 @@ export default {
   data() {
     return {
       count: 0,
-      availability: true,
-      description: "av-label",
-      nav: "av-label disabled",
-      age: 25,
-      courses: { id: 1, course: "VUE", credits: 20, location: "south" },
+      id: "id",
+      course: "course",
+      credits: "credits",
+      location: "location",
+      availability: "availability",
+      // courses: { id: 1, course: "VUE", credits: 20, location: "south" },
       // courses: [
       //   { id: 1, course: "VUE", credits: 20, location: "south" },
       //   { id: 2, course: "Powershell", credits: 35, location: "west" },
