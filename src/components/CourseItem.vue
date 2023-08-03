@@ -1,18 +1,16 @@
 <template>
   <div class="card">
-    <h2>Course name:</h2>
-    <div>Credits:</div>
-    <div>Id:</div>
-    <div>Teacher:</div>
-    <div>Location:</div>
-    <div>Description:</div>
+    <h2>{{ course.name }}</h2>
+    <p>{{ course.description }}</p>
+    <ul>
+      <li>{{ course.credits }}</li>
+      <li>{{ course.id }}</li>
+      <li>{{ course.teacher }}</li>
+      <li>{{ course.location }}</li>
+    </ul>
 
-    <!-- <p v-if="(count = 0)">summit</p>
-      <p v-else-if="count > 1 && count < 20">Allowed</p>
-      <p v-else>Full</p> -->
-
-    <button @click="innerAdd">Add</button>
-    <button @click="outerAdd">Add to parent</button>
+    <button @click="sendAdd">Add Course</button>
+    <button @lick="sendRemove">Remove Course</button>
   </div>
 </template>
 
@@ -39,7 +37,12 @@ export default {
   },
   data() {
     return {
-      count: 0,      
+      count: 0,
+      id: "id",
+      course: "course",
+      credits: "credits",
+      location: "location",
+      availability: "availability",
     };
   },
   methods: {
